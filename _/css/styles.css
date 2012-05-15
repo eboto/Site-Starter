@@ -27,7 +27,7 @@ body, select, input, textarea {
 /* !Links */
 
 a, a:link, a:visited {
-	color: #fff;
+	color: #990000;
 	text-decoration: none;
 	-moz-transition: all 0.25s ease;
 	-webkit-transition: all 0.25s ease;
@@ -35,7 +35,7 @@ a, a:link, a:visited {
 	transition: all 0.25s ease;
 }
 
-a:hover { color: #e3309f; }
+a:hover { color: #222; }
 
 ::-moz-selection{ background: #e3309f; color: #fff; text-shadow: none;}
 ::selection { background: #e3309f; color: #fff; text-shadow: none;} 
