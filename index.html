@@ -1,34 +1,49 @@
-<!doctype html> 
-<!--[if lt IE 7 ]> <html class="ie lt-ie9 ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie lt-ie9 ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie lt-ie9 ie8 no-js" lang="en"> <![endif]-->
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ltie9 ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ltie9 ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ltie9 ie8 no-js" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
+
+<head id="www-clientdomain-com"">
+
+	<meta charset="utf-8">
 	
-	<meta charset="utf-8" /> 
-
-	<title>Site Starter | by Ryan Scherler</title>                  	 
-
-	<meta name="description" content="" />
-	<meta name="author" content="Ryan Scherler" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<!-- <meta name="verify-v1" content="=replacewithgooglewebmastertoolstrackingcode" /> -->
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<link rel="shortcut icon" href="_/img/favicon.ico">
-	<link rel="apple-touch-icon" sizes="114x114" href="_/img/favicon-ios.png">
-	 
-	<link rel="stylesheet" media="all" href="_/css/styles.css" /> 
+	<title>Client</title>
 	
-	<script src="_/js/modernizr.custom.min.js"></script>
+	<meta name="title" content="Client">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<!-- uncomment before going live! -->
+	<meta name="robots" content="noindex,nofollow">
+	
+	<meta name="google-site-verification" content="">
+	
+	<meta name="author" content="Crashpad Design">
+	<meta name="Copyright" content="Copyright Client 2012. All Rights Reserved.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-</head> 
- 
-<body> 
+	<link rel="shortcut icon" href="/_/images/favicon.ico">	 
+	<link rel="apple-touch-icon" href="/_/images/favicon-ios.png">
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+	<link rel="stylesheet/less" href="/_/stylesheets/styles.less">
+	
+	<script src="/_/javascripts/libs/less.1.3.min.js""></script>
+	<!-- remove before going live // or just compile LESS via CodeKit and remove client-side compilation (recommended) -->
+	<script>localStorage.clear();</script>
+	
+	<script src="/_/javascripts/libs/modernizr.2.5.3.min.js"></script>
 
-	<div class="container content">
+</head>
+
+<body>
+
+	<div class="container-fluid content">
 
 		<div class="row">
 		
@@ -87,23 +102,38 @@
 	
 	</div>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script> 
-	<script>window.jQuery || document.write("<script src='_/js/jquery-1.7.1.min.js'>\x3C/script>")</script> 
-	<script src="_/js/functions.js"></script> 
-
-	<!-- <script>
+	<script>
 	
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-XXXXXX-X']);
-		_gaq.push(['_trackPageview']);
+		Modernizr.load([
+		  { // load jQuery via Google API
+		    load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js', 
+		    complete: function() { // if API fails then load locally
+		      if (!window.jQuery) { Modernizr.load('/_/javascripts/libs/jquery.1.7.2.min.js');
+		      }
+		    }
+		  },
+		  /*
+		  { // load global script dependencies/plugins
+			  both: [
+			  	'/_/javascripts/libs/lib.js', 
+			  	'/_/javascripts/plugins/plugin/plugin.js' 
+			  ],
+			  complete: function() { // load global functions
+					Modernizr.load('/_/javascripts/global.js'); 
+			  }
+		  },
+		  { // load any page specific script dependencies/plugins
+		    load: '/_/javascripts/plugins/plugin/script.js',
+		    complete: function() { // load page specific scripts
+			    Modernizr.load('/_/javascripts/pages/landing.js');
+			  }
+		  },
+		  */
+		  '/_/javascripts/global.js',
+		  '/_/javascripts/analytics.js' // finally load analytics & other tracking code
+		]);
 		
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	
-	</script> -->
-	
+	</script>
+  
 </body>
 </html>

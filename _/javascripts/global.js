@@ -3,22 +3,20 @@
 
 
 /* trigger when page is ready */
-$(document).ready(function (){
+$(document).ready(function(){
 	
 	
-
+	
 });
-
 
 
 /* optional triggers
 
-	$(window).load(function() {
-		
-	});
+$(window).load(function() {
+	
+});
 
-	$(window).resize(function() {		
-		
-	});
-
+$(window).resize(function() {
+	
+});
 */

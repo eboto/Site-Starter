@@ -1,0 +1,36 @@
+/*
+	File :: public.less
+	----------------------------------------------------------
+	
+	Author: Ryan Scherler
+	Client: Client
+	Initial Creation Date: July 2012
+	
+------------------------------------------------------------------------------- */
+
+// CSS reset
+@import "reset.less";
+
+// global variables (colors etc.)
+@import "variables.less";
+
+// useful re-usable functions and encapsulated styles
+@import "mixins.less";
+
+// base grids (choose)
+//@import "grid-16col.less";
+@import "grid-fluid.less";
+
+// plugin base styles (jQuery slideshows etc.)
+
+// main (base) styles
+@import "base.less";
+
+// optional base styles (typography forms etc.)
+@import "type.less";
+
+// individual template styles (landing, about, gallery etc.)
+@import "pages/landing.less";
+
+// print style overrides
+@import "print.less";
