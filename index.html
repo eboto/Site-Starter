@@ -34,8 +34,12 @@
 	<link rel="stylesheet/less" href="/_/stylesheets/less/styles.less">
 	
 	<script src="/_/javascripts/libs/less.1.3.min.js""></script>
-	<!-- remove before going live // or just compile LESS via CodeKit and remove client-side compilation (recommended) -->
-	<script>localStorage.clear();</script>
+	<script>
+		// Less Development Mode
+		less.env = "development";
+		less.watch();
+		localStorage.clear();
+	</script>
 	
 	<script src="/_/javascripts/libs/modernizr.2.5.3.min.js"></script>
 
