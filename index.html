@@ -6,7 +6,7 @@
 <!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 
-<head id="www-clientdomain-com"">
+<head>
 
 	<meta charset="utf-8">
 	
@@ -27,13 +27,13 @@
 	<meta name="Copyright" content="Copyright Client 2012. All Rights Reserved.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<link rel="shortcut icon" href="/_/images/favicon.ico">	 
-	<link rel="apple-touch-icon" href="/_/images/favicon-ios.png">
+	<link rel="shortcut icon" href="_/images/favicon.ico">	 
+	<link rel="apple-touch-icon" href="_/images/favicon-ios.png">
 	
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
-	<link rel="stylesheet/less" href="/_/stylesheets/less/styles.less">
+	<link rel="stylesheet/less" href="_/stylesheets/less/styles.less">
 	
-	<script src="/_/javascripts/libs/less.1.3.min.js""></script>
+	<script src="_/javascripts/libs/less.1.3.min.js""></script>
 	<script>
 		// Less Development Mode
 		less.env = "development";
@@ -41,7 +41,7 @@
 		localStorage.clear();
 	</script>
 	
-	<script src="/_/javascripts/libs/modernizr.2.5.3.min.js"></script>
+	<script src="_/javascripts/libs/modernizr.2.6.2.min.js"></script>
 
 </head>
 
@@ -106,38 +106,21 @@
 	
 	</div>
 	
-	<script>
+	<!-- jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="_/javascripts/libs/jquery.1.7.2.min.js"%3E%3C/script%3E'))</script>
+
+	<!-- Plugins
+	<script src="_/javascripts/plugins/plugin.js"></script>	-->
 	
-		Modernizr.load([
-		  { // load jQuery via Google API
-		    load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js', 
-		    complete: function() { // if API fails then load locally
-		      if (!window.jQuery) { Modernizr.load('/_/javascripts/libs/jquery.1.7.2.min.js');
-		      }
-		    }
-		  },
-		  /*
-		  { // load global script dependencies/plugins
-			  both: [
-			  	'/_/javascripts/libs/lib.js', 
-			  	'/_/javascripts/plugins/plugin/plugin.js' 
-			  ],
-			  complete: function() { // load global functions
-					Modernizr.load('/_/javascripts/global.js'); 
-			  }
-		  },
-		  { // load any page specific script dependencies/plugins
-		    load: '/_/javascripts/plugins/plugin/script.js',
-		    complete: function() { // load page specific scripts
-			    Modernizr.load('/_/javascripts/pages/landing.js');
-			  }
-		  },
-		  */
-		  '/_/javascripts/global.js',
-		  '/_/javascripts/analytics.js' // finally load analytics & other tracking code
-		]);
-		
-	</script>
+	<!-- Global Functions -->
+	<script src="_/javascripts/global.js"></script>
+	
+	<!-- Page / Template Specific -->
+	<script src="_/javascripts/pages/landing.js"></script>	
+	
+	<!-- Analytics / Tracking Code -->
+	<script src="_/javascripts/analytics.js"></script>
   
 </body>
 </html>
