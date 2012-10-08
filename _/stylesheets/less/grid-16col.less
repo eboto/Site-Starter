@@ -12,13 +12,41 @@
 
 ------------------------------------------------------------------------------- */
 
-body {
-    min-width: 960px;
-}
+body { min-width: 960px; }
+
 .container-16 {
+
     margin-left: auto;
     margin-right: auto;
     width: 960px;
+    zoom: 1;
+
+	&:before, &:after {
+	    content: '.';
+	    display: block;
+	    overflow: hidden;
+	    visibility: hidden;
+	    font-size: 0;
+	    line-height: 0;
+	    width: 0;
+	    height: 0;
+	}
+	
+	&:after { clear: both; }
+
+	.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16 {
+
+	    display: inline;
+	    float: left;
+	    margin-left: 10px;
+	    margin-right: 10px;
+
+		&.alpha { margin-left: 0; }
+		
+		&.omega { margin-right: 0; }
+
+	}
+    
     .grid-1 {
         width: 40px;
     }
@@ -67,6 +95,7 @@ body {
     .grid-16 {
         width: 940px;
     }
+    
     .prefix-1 {
         padding-left: 60px;
     }
@@ -112,6 +141,7 @@ body {
     .prefix-15 {
         padding-left: 900px;
     }
+    
     .suffix-1 {
         padding-right: 60px;
     }
@@ -157,6 +187,11 @@ body {
     .suffix-15 {
         padding-right: 900px;
     }
+    
+	.push-1, .pull-1, .push-2, .pull-2, .push-3, .pull-3, .push-4, .pull-4, .push-5, .pull-5, .push-6, .pull-6, .push-7, .pull-7, .push-8, .pull-8, .push-9, .pull-9, .push-10, .pull-10, .push-11, .pull-11, .push-12, .pull-12, .push-13, .pull-13, .push-14, .pull-14, .push-15, .pull-15, .push-16, .pull-16 {
+	    position: relative;
+	}
+
     .push-1 {
         left: 60px;
     }
@@ -202,6 +237,7 @@ body {
     .push-15 {
         left: 900px;
     }
+    
     .pull-1 {
         left: -60px;
     }
@@ -247,66 +283,5 @@ body {
     .pull-15 {
         left: -900px;
     }
-}
-.grid-1,
-.grid-2,
-.grid-3,
-.grid-4,
-.grid-5,
-.grid-6,
-.grid-7,
-.grid-8,
-.grid-9,
-.grid-10,
-.grid-11,
-.grid-12,
-.grid-13,
-.grid-14,
-.grid-15,
-.grid-16 {
-    display: inline;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.push-1, .pull-1,
-.push-2, .pull-2,
-.push-3, .pull-3,
-.push-4, .pull-4,
-.push-5, .pull-5,
-.push-6, .pull-6,
-.push-7, .pull-7,
-.push-8, .pull-8,
-.push-9, .pull-9,
-.push-10, .pull-10,
-.push-11, .pull-11,
-.push-12, .pull-12,
-.push-13, .pull-13,
-.push-14, .pull-14,
-.push-15, .pull-15,
-.push-16, .pull-16 {
-    position: relative;
-}
-.alpha {
-    margin-left: 0;
-}
-.omega {
-    margin-right: 0;
-}
-.container-16:before,
-.container-16:after {
-    content: '.';
-    display: block;
-    overflow: hidden;
-    visibility: hidden;
-    font-size: 0;
-    line-height: 0;
-    width: 0;
-    height: 0;
-}
-.container-16:after {
-    clear: both;
-}
-.container-16 {
-    zoom: 1;
+    
 }
