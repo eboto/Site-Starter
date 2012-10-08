@@ -9,30 +9,26 @@
 	
 ------------------------------------------------------------------------------- */
 
-// CSS reset
+// reset
 @import "normalize.less";
 
-// global variables (colors etc.)
+// globals
 @import "variables.less";
 
-// useful re-usable functions and encapsulated styles
+// functions
 @import "mixins.less";
 
-// base grids (choose)
-//@import "grid-16col.less";
-//@import "grid-12col.less";
+// grid
 @import "grid-12col-fluid.less";
 
-// plugin base styles (jQuery slideshows etc.)
-
-// main (base) styles
-@import "base.less";
-
-// optional base styles (typography forms etc.)
+// type
 @import "type.less";
 
-// individual template styles (landing, about, gallery etc.)
+// base
+@import "main.less";
+
+// templates
 @import "pages/landing.less";
 
-// print style overrides
+// print
 @import "print.less";
