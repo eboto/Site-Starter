@@ -13,7 +13,7 @@ body {
 	background: @offWhite;
 }
 
-body, select, input, textarea {
+body, select, input, textarea, button {
 	font-family: "Lato", Geneva, Helmet, Freesans, sans-serif;
 	-webkit-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
@@ -24,7 +24,6 @@ body, select, input, textarea {
 
 a {
 
-	text-decoration: none;
 	color: @blue;
 	.transition(color 0.25s ease);
 	
@@ -40,6 +39,25 @@ a {
 
 ins { background-color: @gray; color: @black; text-decoration: none; }
 mark { background-color: @gray; color: @black; font-style: italic; font-weight: bold; }
+
+/* !Image Scaling */
+
+.scale img, img.scale, object, embed { max-width: 100%; }
+.scale img, img.scale { height: auto; }
+
+/* !Clear Floats */
+
+.group {
+	 &:before, &:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+    } 
+}
+
+.ie6, .ie7 { .group { min-height: 1px; } }
 
 /* !Layout */
 
