@@ -9,36 +9,36 @@
 /* !General */
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: @offWhite;
+	font-family: "Goudy Bookletter 1911", serif;
+	background: @salmon;
 }
 
 body, select, input, textarea, button {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Goudy Bookletter 1911", serif;
 	-webkit-text-size-adjust: none;
 	text-rendering: optimizeLegibility;
-	color: @black;
+	color: @red;
 }
 
 /* !Links */
 
 a {
 
-	color: @blue;
+	color: @white;
 	.transition(color 0.25s ease);
 	
-	&:hover { color: lighten(@blue, 25%); }
-	&:link { -webkit-tap-highlight-color: @black; } 
+	&:hover { color: @red; }
+	&:link { -webkit-tap-highlight-color: @red; } 
 	
 }
 
 /* !Selection */
 
-::-moz-selection { background: @gray; color: @white; text-shadow: none; }
-::selection { background: @gray; color: @white; text-shadow: none; } 
+::-moz-selection { background: @red; color: @white; text-shadow: none; }
+::selection { background: @red; color: @white; text-shadow: none; } 
 
-ins { background-color: @gray; color: @black; text-decoration: none; }
-mark { background-color: @gray; color: @black; font-style: italic; font-weight: bold; }
+ins { background-color: @red; color: @black; text-decoration: none; }
+mark { background-color: @red; color: @black; font-style: italic; font-weight: bold; }
 
 /* !Image Scaling */
 
@@ -59,9 +59,29 @@ mark { background-color: @gray; color: @black; font-style: italic; font-weight: 
 
 .ie6, .ie7 { .group { min-height: 1px; } }
 
-/* !Layout */
+/* !Main Styles */
 
+body {
+	margin: 40px 0;
+}
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: @white;
+	text-shadow: 0 1px 0 @red;
+}
+
+p, ul, ol, dl, blockquote {
+	text-shadow: 0 1px 0 lighten(@salmon, 5%);	
+}
+
+h1 {
+	text-transform: uppercase;
+	padding-top: .25em;
+	border-top: 2px solid @red;
+	padding-bottom: .25em;
+	border-bottom: 2px solid @red;
+}
 
 /* !Smaller Screens */
 
