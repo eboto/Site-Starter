@@ -4,7 +4,7 @@
 <!--[if IE 7 ]>    <html class="ie ltie9 ie7 no-js" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ltie9 ie8 no-js" lang="en"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
 
 <head>
 
@@ -16,7 +16,6 @@
 	
 	<meta name="title" content="Client">
 	<meta name="description" content="">
-	<meta name="keywords" content="">
 	
 	<!-- uncomment before going live! -->
 	<meta name="robots" content="noindex,nofollow">
@@ -32,6 +31,10 @@
 
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911">	
 	<link rel="stylesheet/less" href="_/stylesheets/less/bootstrap.less">
+
+	<!--[if lt IE 9]>
+		<script src="_/javascripts/libs/html5shiv.js"></script>
+	<![endif]-->
 	
 	<script src="_/javascripts/libs/less.1.3.min.js""></script>
 	<script>
@@ -40,8 +43,6 @@
 		less.watch();
 		localStorage.clear();
 	</script>
-	
-	<script src="_/javascripts/libs/modernizr.2.6.2.min.js"></script>
 
 </head>
 
