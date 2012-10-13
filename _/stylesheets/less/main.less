@@ -9,14 +9,11 @@
 /* !General */
 
 body {
-	font-family: "Goudy Bookletter 1911", serif;
 	background: @offWhite;
 }
 
 body, select, input, textarea, button {
 	font-family: "Goudy Bookletter 1911", serif;
-	-webkit-text-size-adjust: none;
-	text-rendering: optimizeLegibility;
 	color: @black;
 }
 
@@ -47,16 +44,14 @@ mark { background-color: @black; color: @black; font-style: italic; font-weight:
 
 /* !Clear Floats */
 
-.group {
-
-	 &:before, &:after {
-		content: "."; 
-	    display: block; 
-	    height: 0; 
-	    clear: both; 
-	    visibility: hidden;
-    } 
-    
+.clearfix {
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;   
+	} 
 }
 
 .ie6, .ie7 { .group { min-height: 1px; } }
@@ -73,7 +68,7 @@ h1 {
 /* !Layout */
 
 body {
-	margin: 40px 0;
+	margin: 5em 0;
 }
 
 .container-12-fluid {
