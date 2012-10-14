@@ -39,8 +39,10 @@ mark { background-color: @black; color: @black; font-style: italic; font-weight:
 
 /* !Image Scaling */
 
-.scale img, img.scale, object, embed { max-width: 100%; }
-.scale img, img.scale { height: auto; }
+img, object, embed { 
+	max-width: 100%; 
+	height: auto;
+}
 
 /* !Clear Floats */
 
@@ -53,8 +55,6 @@ mark { background-color: @black; color: @black; font-style: italic; font-weight:
 		visibility: hidden;   
 	} 
 }
-
-.ie6, .ie7 { .group { min-height: 1px; } }
 
 /* Type */
 
